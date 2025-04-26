@@ -5,11 +5,13 @@
   "Punchline": "Get your picture perfect selfies",
   "Description": "Allows you to run a command (macro it!) to automatically move your camera to the perfect selfie spot and takes screenshots. Requires /visage unlocked!",
   "RepoUrl": "https://github.com/ZoombieDyl/AutoSelfie",
+  "AssemblyVersion": "1.0.0",
   "Tags": [
     "camera",
     "emote",
     "visage"
   ],
+  "DalamudApiLevel": 12,
   "CategoryTags": null,
   "LoadPriority": 0,
   "LastUpdate": 0,
