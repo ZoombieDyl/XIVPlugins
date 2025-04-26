@@ -1,6 +1,4 @@
-﻿﻿// AutoSelfie.cs
-using Dalamud.Game.Command;
-using Dalamud.IoC;
+﻿﻿using Dalamud.Game.Command;
 using Dalamud.Plugin;
 using Dalamud.Plugin.Services;
 using System.Threading.Tasks;
@@ -13,14 +11,13 @@ namespace AutoSelfie
 
         [PluginService] public static ICommandManager CommandManager { get; private set; } = null!;
         [PluginService] public static IChatGui ChatGui { get; private set; } = null!;
-        [PluginService] public static IPluginLog Log { get; private set; } = null!;
-        [PluginService] public static IFramework Framework { get; private set; } = null!;
+        [PluginService] public static IScreenshotProvider ScreenshotProvider { get; private set; } = null!;
 
         public AutoSelfie()
         {
             CommandManager.AddHandler("/autoselfie", new CommandInfo(OnCommand)
             {
-                HelpMessage = "Set camera and take selfies automatically."
+                HelpMessage = "Run AutoSelfie: set camera, emote, and take screenshots."
             });
         }
 
@@ -31,17 +28,23 @@ namespace AutoSelfie
 
         private void OnCommand(string command, string args)
         {
-            ChatGui.Print("[AutoSelfie] Setting camera and starting!");
-            CameraManager.SetSelfieCamera();
+            ChatGui.Print("Running AutoSelfie!");
 
-            SendEmote("/visage"); // Customize emote here
+            CameraManager.SetCamera(
+                yawDegrees: 180.0f,   // facing backward
+                pitchDegrees: -10.0f, // slightly up
+                zoomDistance: 3.0f    // selfie distance
+            );
+
+            SendEmote("/visage"); // or any emote you want
 
             Task.Run(async () =>
             {
-                await Task.Delay(2000);
+                await Task.Delay(2000); // wait for emote animation
+
                 for (int i = 0; i < 5; i++)
                 {
-                    PluginUtilities.TakeScreenshot();
+                    SimulatePrintScreen();
                     await Task.Delay(1000);
                 }
             });
@@ -49,7 +52,13 @@ namespace AutoSelfie
 
         private void SendEmote(string emoteCommand)
         {
+            ChatGui.Print($"> {emoteCommand}");
             ChatGui.SendMessage(emoteCommand);
+        }
+
+        private void SimulatePrintScreen()
+        {
+            ScreenshotProvider.TakeScreenshot();
         }
     }
 }
