@@ -1,22 +1,24 @@
-{
-  "Author": "Gray Lunoire @ Adamantoise",
-  "Name": "Auto Selfie",
-  "ApplicableVersion": "any",
-  "Punchline": "Get your picture perfect selfies",
-  "Description": "Allows you to run a command (macro it!) to automatically move your camera to the perfect selfie spot and takes screenshots. Requires /visage unlocked!",
-  "RepoUrl": "https://github.com/ZoombieDyl/AutoSelfie",
-  "Tags": [
-    "camera",
-    "emote",
-    "visage"
-  ],
-  "DalamudApiLevel": 12,
-  "IsHide": "False",
-  "IsTestingExclusive": "False",
-  "LastUpdated": 1731672162,
-  "DownloadCount": 666,
-  "IconUrl": "https://raw.githubusercontent.com/ZoombieDyl/AutoSelfie/master/logo.png",
-  "DownloadLinkInstall": "https://github.com/ZoombieDyl/XIVPlugins/blob/master/PluginFiles/AutoSelfie.zip?raw=true",
-  "DownloadLinkTesting": "https://github.com/ZoombieDyl/XIVPlugins/blob/master/PluginFiles/AutoSelfie.zip?raw=true",
-  "DownloadLinkUpdate": "https://github.com/ZoombieDyl/XIVPlugins/blob/master/PluginFiles/AutoSelfie.zip?raw=true"
-}
+[
+  {
+    "Author": "Gray Lunoire @ Adamantoise",
+    "Name": "Auto Selfie",
+    "ApplicableVersion": "any",
+    "Punchline": "Get your picture perfect selfies",
+    "Description": "Allows you to run a command (macro it!) to automatically move your camera to the perfect selfie spot and takes screenshots. Requires /visage unlocked!",
+    "RepoUrl": "https://github.com/ZoombieDyl/XIVPlugins",
+    "Tags": [
+      "camera",
+      "emote",
+      "visage"
+    ],
+    "DalamudApiLevel": 12,
+    "IsHide": "False",
+    "IsTestingExclusive": "False",
+    "LastUpdated": 1731672162,
+    "DownloadCount": 666,
+    "IconUrl": "https://raw.githubusercontent.com/ZoombieDyl/AutoSelfie/master/logo.png",
+    "DownloadLinkInstall": "https://github.com/ZoombieDyl/XIVPlugins/blob/master/PluginFiles/AutoSelfie.zip?raw=true",
+    "DownloadLinkTesting": "https://github.com/ZoombieDyl/XIVPlugins/blob/master/PluginFiles/AutoSelfie.zip?raw=true",
+    "DownloadLinkUpdate": "https://github.com/ZoombieDyl/XIVPlugins/blob/master/PluginFiles/AutoSelfie.zip?raw=true"
+  }
+]
