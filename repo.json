@@ -1,0 +1,21 @@
+{
+  "Author": "Gray Lunoire @ Adamantoise",
+  "Name": "Auto Selfie",
+  "ApplicableVersion": "any",
+  "Punchline": "Get your picture perfect selfies",
+  "Description": "Allows you to run a command (macro it!) to automatically move your camera to the perfect selfie spot and takes screenshots. Requires /visage unlocked!",
+  "RepoUrl": "https://github.com/ZoombieDyl/AutoSelfie",
+  "Tags": [
+    "camera",
+    "emote",
+    "visage"
+  ],
+  "CategoryTags": null,
+  "LoadPriority": 0,
+  "LastUpdate": 0,
+  "DownloadLinkInstall": null,
+  "DownloadLinkTesting": null,
+  "DownloadLinkUpdate": null,
+  "ImageUrls": null,
+  "IconUrl": "https://raw.githubusercontent.com/ZoombieDyl/AutoSelfie/master/logo.png"
+}
