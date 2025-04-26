@@ -1,12 +1,13 @@
 using System;
-using Dalamud.Plugin;
+using Dalamud.IoC;
 using Dalamud.Plugin.Services;
 
 namespace AutoSelfie
 {
     public static unsafe class CameraManager
     {
-        [PluginService] public static ITargetManager TargetManager { get; private set; } = null!;
+        [PluginService]
+        private static ITargetManager TargetManager { get; set; } = null!;
 
         private static IntPtr CameraPointer => TargetManager?.Camera?.Address ?? IntPtr.Zero;
 
@@ -23,16 +24,16 @@ namespace AutoSelfie
 
         private static float DegreesToRadians(float degrees)
         {
-            return degrees * ((float)Math.PI / 180f);
+            return (float)(degrees * (Math.PI / 180.0));
         }
 
         private struct Camera
         {
-            public fixed byte Unknown1[0x30]; // Padding up to Zoom
-            public float Zoom;   // 0x30
-            public fixed byte Unknown2[0x40]; // Padding up to Yaw
-            public float Yaw;    // 0x70
-            public float Pitch;  // 0x74
+            public fixed byte Unknown1[0x30];
+            public float Zoom;
+            public fixed byte Unknown2[0x40];
+            public float Yaw;
+            public float Pitch;
         }
     }
 }
