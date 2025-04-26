@@ -32,7 +32,7 @@ namespace AutoSelfie
 {
     public sealed class AutoSelfie : IDalamudPlugin
     {
-        public string Name => "AutoSeasdasdlfie";
+        public string Name => "AutoSelfie";
 
         [PluginService] public static ICommandManager CommandManager { get; private set; } = null!;
         [PluginService] public static IChatGui ChatGui { get; private set; } = null!;
