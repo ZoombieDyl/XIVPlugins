@@ -7,9 +7,9 @@ namespace AutoSelfie
     public static unsafe class CameraManager
     {
         [PluginService]
-        private static ITargetManager TargetManager { get; set; } = null!;
+        private static ICameraManager CameraManagerService { get; set; } = null!;
 
-        private static IntPtr CameraPointer => TargetManager?.Camera?.Address ?? IntPtr.Zero;
+        private static IntPtr CameraPointer => CameraManagerService->Address ?? IntPtr.Zero;
 
         public static void SetCamera(float yawDegrees, float pitchDegrees, float zoomDistance)
         {
